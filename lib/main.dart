@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gemini_app/config/router/app_router.dart';
 import 'package:flutter_gemini_app/config/theme/app_theme.dart';
 
 void main() {
-  runApp(const MainApp());
+AppTheme.setSystemUIOverlayStyle(isDarkMode: true);
+
+  runApp(ProviderScope(child: GeminiApp()));
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class GeminiApp extends StatelessWidget {
+  const GeminiApp({super.key});
 
   @override
   Widget build(BuildContext context) {
