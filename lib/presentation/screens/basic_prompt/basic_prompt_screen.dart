@@ -59,12 +59,13 @@ class BasicPromptScreen extends ConsumerWidget {
         theme: DarkChatTheme(),
         showUserNames: true,
         typingIndicatorOptions: TypingIndicatorOptions(
-            typingUsers: isGeminiWriting
-                ? [geminiUser]
-                : [],
-            customTypingWidget: const Center(
+          typingUsers: isGeminiWriting
+              ? [geminiUser]
+              : [],
+          customTypingWidget: const Center(
           child: Text('Gemini esta pensando ... '),
-        )),
+          ),
+        ),
       ),
     );
   }
